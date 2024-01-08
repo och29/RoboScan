@@ -29,6 +29,6 @@ RUN pip install -r requirements.txt
 COPY . ./
 RUN python -m compileall .
 
-# Uncomment this if you have a Google Coral Edge TPU
-# CMD ["python", "webapp.py", "-tpu", "--destination", "/storage/share", "--archive", "/storage/archive", "--temp", "/storage/tmp"]
-CMD ["python", "webapp.py", "--destination", "/storage/share", "--archive", "/storage/archive", "--temp", "/storage/tmp"]
+# Uncomment the line 33 for TPU support and # line 34, else do the reverse
+CMD ["python", "webapp.py", "-tpu", "--destination", "/storage/share", "--archive", "/storage/archive", "--temp", "/storage/tmp"]
+#CMD ["python", "webapp.py", "--destination", "/storage/share", "--archive", "/storage/archive", "--temp", "/storage/tmp"]
